@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/taskList.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="paiQuadro">
+        <div class="container d-flex justify-content-center">
+            <col class="row">
+                <div class="col-lg-9">
+                    <div class="quadro">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-2 col-4">
+                                    <a href="/newTask2"><div class="mais">
+                                        <h1>+</h1>
+                                    </div></a>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-4">
+                                    <div class="titulo">
+                                        <h1>Lista de Tarefas</h1>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-4">
+                                </div>
+
+                                <div class="quadro-task">
+                                    {% if r|length > 0 %}
+                                        {% for registro in r %}
+                                            <div class="task" style="position: relative;">
+                                                <p class="titulo-task">{{ registro.tituloTarefa }}</p>
+                                                <p class="descricao-task">{{ registro.descricaoTarefa }}</p>
+                                
+                                                <div class="espacoButtons" id="espacoButtons">
+                                                    <form action="/selecionarRegistro/{{registro.id}}" method="post">
+                                                        <button type="button" class="btn btn-outline-secondary btn-sm" style="margin-right: 5px;" data-toggle="modal" data-target="#ModalLongoExemplo{{ registro.id }}">
+                                                            Visualizar
+                                                        </button>
+                                                    </form>
+
+                                                    <form action="/selecionarRegistro/{{registro.id}}" method="post">
+                                                        <button type="button" class="btn btn-outline-secondary btn-sm" style="margin-right: 5px;" data-toggle="modal" data-target="#ModalLongoExemplo2{{ registro.id }}">
+                                                            Editar
+                                                        </button>
+                                                    </form>
+
+                                                    <form action="/deletar_registro/{{registro.id}}" method="post">
+                                                        <button class="btn btn-outline-danger btn-sm" type="button" data-toggle="modal" data-target="#exampleModalCenter{{ registro.id }}">Deletar</button>
+                                                    </form>    
+                                                </div>
+                                            </div>
+                                
+                                            <div class="modal" id="exampleModalCenter{{ registro.id }}" tabindex="-1" closable="False" role="dialog" style="z-index: 1000;" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalCenterTitle">Confirmar exclusão</h5>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>Você tem certeza de que deseja excluir esta tarefa?</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancelar</button>
+                                                            <form action="/deletar_registro/{{registro.id}}" method="post">
+                                                                <button type="submit" class="btn btn-outline-danger">Confirmar</button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal fade" id="ModalLongoExemplo{{ registro.id }}" tabindex="-1" role="dialog" aria-labelledby="TituloModalLongoExemplo" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="TituloModalLongoExemplo">{{ registro.tituloTarefa }}</h5>
+                                                    </div>
+
+                                                    <div class="modal-body">
+                                                        <p id="conteudoModalVisualizacao">{{ registro.descricaoTarefa }}</p>
+                                                    </div>
+                                                    
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Fechar</button>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <form action="/editar_registro/{{ registro.id }}" method="post">
+                                                <div class="modal fade" id="ModalLongoExemplo2{{ registro.id }}" tabindex="-1" role="dialog" aria-labelledby="TituloModalLongoExemplo2" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                                        <div class="modal-content">
+
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="TituloModalLongoExemplo">Editar Tarefa</h5>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="container">
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <p style="font-family: 'Amatic SC', cursive; font-size: 25px; margin-bottom: 1px;">Tarefa:</p>
+                                                                    </div>
+                                                                    <div class="col-12 d-flex justify-content-center">
+                                                                        <input type="text" style="width: 100%; margin-bottom: 15px; border-radius: 30px; border: 1px solid black; font-size: 20px; padding-left: 10px;" name="campo1" value="{{ registro.tituloTarefa }}" id="">
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <p style="font-family: 'Amatic SC', cursive; font-size: 25px; margin-bottom: 1px;">Descrição:</p>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <textarea name="campo2" style="width: 100%; resize: none; border-radius: 15px; padding: 10px; font-size: 18px;" id="" rows="10">{{ registro.descricaoTarefa }}</textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="modal-footer">
+                                                            <form action="">
+                                                                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Fechar</button>
+                                                            </form>
+
+                                                            <button type="submit" class="btn btn-outline-warning" style="margin-right: 5px;" data-toggle="modal" data-target="#ModalLongoExemplo2{{ registro.id }}">
+                                                                Salvar
+                                                            </button>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        {% endfor %}
+                                    {% else %}
+                                        <div class="semTarefa">
+                                            <p>Não há nenhuma Tarefa.</p>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="buttons1">
+        <div class="espaco-button1">
+            <div class="quadro-button1">
+                <a href="/"><div class="button1">
+                <h2><</h2>
+                </div></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

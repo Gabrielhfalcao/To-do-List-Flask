@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Permanent+Marker&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Raleway:ital,wght@1,100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body{
+    margin: 0px;
+    background-color: rgb(35, 52, 57);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.paiQuadro{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.quadro{
+    width: 100%;
+    height: 640px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    padding-top: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 5px 20px 1px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.quadro-task::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
+}
+  
+.quadro-task::-webkit-scrollbar-track {
+    background: transparent;
+    padding: 2px;
+}
+  
+.quadro-task::-webkit-scrollbar-thumb {
+    background-color: #000;
+}
+
+.mais{
+    border: solid 1px white;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    transition: .5s;
+}
+
+.mais:hover{
+    border: solid 1px rgb(35, 52, 57);
+    border-radius: 10px;
+    background-color: #fcbe24;
+    text-align: center;
+    color: rgb(35, 52, 57);
+    transition: .5s;
+}
+
+.titulo{
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px;
+    color: #fcbe24;
+    margin-bottom: 50px;
+}
+
+a:link{
+    text-decoration: none;
+}
+  
+a{ 
+    color: inherit; 
+} 
+
+.buttons1{
+    width: fit-content; 
+    position: fixed;
+    top: 40%;  
+    left: 0;
+    margin-top: 10px;
+}
+
+.button1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  background-color: rgba(79, 87, 33, 0.3);
+  text-align: center;
+  border-radius: 100px;
+  border: solid 1px transparent;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 30px;
+  color: black;
+  box-shadow: 2px 5px 20px 1px rgba(0, 0, 0, 0.2);
+  transition-duration: .5s;
+}
+
+.button1:hover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  background-color: transparent;
+  text-align: center;
+  border-radius: 100px;
+  border: solid 1px #fcbe24;
+  margin-bottom: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 35px;
+  color: #fcbe24;
+  box-shadow: 2px 5px 20px 1px rgba(0, 0, 0, 0.9);
+  transition-duration: .5s;
+}
+
+.quadro-button1{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.espaco-button1{
+  width: fit-content;
+}
+
+h2{
+    font-family: 'Amatic SC', cursive;
+    color: #fcbe24;
+    font-size: 25px;
+}
+
+.quadro-task{
+    width: 100%;
+    overflow: auto;
+    height: 500px;
+}
+
+.task{
+    position: relative;
+    width: 90%;
+    margin: 0px;
+    border: 0.1px solid white;
+    border-radius: 10px;
+    font-size: 25px;
+    margin: auto;
+    max-height: 220px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.espacoButtons{
+    display: flex;
+    position: absolute;
+    top: 2px;
+    right: 5px;
+}
+
+.task:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.titulo-task{
+    font-family: 'Amatic SC', cursive;
+    color: #fcbe24;
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+.descricao-task{
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.semTarefa{
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.modal{
+    box-shadow: 2px 2px 10px 10px rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+
+.modal::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
+}
+  
+.modal::-webkit-scrollbar-track {
+    background: transparent;
+    padding: 2px;
+}
+  
+.modal::-webkit-scrollbar-thumb {
+    background-color: #000;
+}
+
+.modal-backdrop {
+    z-index: -1;
+    filter: blur(5px);
+}
+
+#TituloModalLongoExemplo{
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+}
+
+textarea::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
+}
+  
+textarea::-webkit-scrollbar-track {
+    background: transparent;
+    padding: 2px;
+}
+  
+textarea::-webkit-scrollbar-thumb {
+    background-color: #afafaf;
+}
+
+input{
+    font-family: 'Pacifico', cursive;
+}

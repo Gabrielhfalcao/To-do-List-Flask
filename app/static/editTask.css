@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Permanent+Marker&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Raleway:ital,wght@1,100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body{
+    margin: 0px;
+    background-color: rgb(35, 52, 57);
+    
+}
+
+.paiQuadro{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.quadro{
+    width: 100%;
+    height: 650px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 5px 20px 1px rgba(0, 0, 0, 0.3);
+    padding-bottom: 10px;
+}
+
+.titulo{
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px;
+    color: #fcbe24;
+}
+
+a:link{
+    text-decoration: none;
+}
+  
+a{ 
+    color: inherit; 
+} 
+
+h2{
+    font-family: 'Amatic SC', cursive;
+    color: #fcbe24;
+    font-size: 25px;
+}
+
+input{
+    width: 100%;
+    background-color: rgb(35, 52, 57);
+    border: 1px solid white;
+    border-radius: 50px;
+    color: white;
+    padding: 5px;
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+textarea{
+    width: 100%;
+    height: 340px;
+    resize: none;
+    background-color: rgb(35, 52, 57);
+    border-radius: 20px;
+    border: 1px solid white;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+}
+
+.butto input{
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 50px;
+    border: 1px solid white;
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    font-size: 20px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.butto input:hover{
+    border: solid 1px rgb(35, 52, 57);
+    background-color: #fcbe24;
+    text-align: center;
+    color: rgb(35, 52, 57);
+    transition: .5s;
+}
+
+.buttons1{
+    width: fit-content; 
+    position: fixed;
+    top: 40%;  
+    left: 0;
+    margin-top: 10px;
+}
+
+.button1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  background-color: rgba(79, 87, 33, 0.3);
+  text-align: center;
+  border-radius: 100px;
+  border: solid 1px transparent;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 30px;
+  color: black;
+  box-shadow: 2px 5px 20px 1px rgba(0, 0, 0, 0.2);
+  transition-duration: .5s;
+}
+
+.button1:hover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  background-color: transparent;
+  text-align: center;
+  border-radius: 100px;
+  border: solid 1px #fcbe24;
+  margin-bottom: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 35px;
+  color: #fcbe24;
+  box-shadow: 2px 5px 20px 1px rgba(0, 0, 0, 0.9);
+  transition-duration: .5s;
+}
+
+.quadro-button1{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.espaco-button1{
+  width: fit-content;
+}
