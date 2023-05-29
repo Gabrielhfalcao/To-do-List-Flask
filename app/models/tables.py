@@ -6,7 +6,7 @@ class Task(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     tituloTarefa = db.Column(db.String)
-    descricaoTarefa = db.Column(db.Text)
+    descricaoTarefa = db.Column(db.String)
 
     def __init__(self, tituloTarefa, descricaoTarefa):
         self.tituloTarefa = tituloTarefa
