@@ -289,8 +289,8 @@ input{
     }
 
     .espacoButtons{
-        top: 2px;
-        right: 2px;
+        top: 0px;
+        right: 0px;
     }
 
     #btVisualizar{
@@ -308,6 +308,10 @@ input{
     #btDeletar{
         width: 60px;
         font-size: 10px;
+    }
+
+    .task{
+        border-top-right-radius: 0px;
     }
 
 }
