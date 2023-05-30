@@ -16,6 +16,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    overflow: hidden;
 }
 
 .quadro{
@@ -26,6 +27,7 @@ body{
     border-radius: 10px;
     box-shadow: 2px 5px 20px 1px rgba(0, 0, 0, 0.3);
     padding-bottom: 10px;
+    overflow: hidden;
 }
 
 .titulo{
@@ -162,13 +164,13 @@ textarea{
         height: 100vh;
         position: absolute;
         height: 100vh;
-        width: 110%;
+        width: 120%;
         
     }
     
     .quadro{
         padding-top: 35px;
-        width: 100%;
+        width: 120%;
         height: 100vh;
         background-color: rgb(25, 37, 41);
         padding-top: 15px;
