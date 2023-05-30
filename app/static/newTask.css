@@ -171,6 +171,7 @@ textarea{
         height: 100vh;
         background-color: rgb(25, 37, 41);
         padding-top: 15px;
+        box-shadow: none;
         border-radius: 10px;
         padding-bottom: 10px;
         
