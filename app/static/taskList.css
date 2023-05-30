@@ -4,6 +4,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+html{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
 body{
     margin: 0px;
     background-color: rgb(35, 52, 57);
@@ -251,7 +257,7 @@ input{
         height: 100vh;
         position: absolute;
         height: 100vh;
-        width: 125%;
+        width: 100%;
     }
     
     .quadro{
@@ -288,8 +294,8 @@ input{
     }
 
     .espacoButtons{
-        top: -8px;
-        right: 0px;
+        top: 2px;
+        right: 2px;
     }
 
     #btVisualizar{
