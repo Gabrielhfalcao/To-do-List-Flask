@@ -148,3 +148,39 @@ textarea{
 .espaco-button1{
   width: fit-content;
 }
+
+@media (max-width: 380px) {
+    body{
+        margin: 0px;
+        background-color: rgb(35, 52, 57);
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    .paiQuadro{
+        position: absolute;
+        height: fit-content;
+        height: 100vh;
+        width: 100%;
+        
+    }
+    
+    .quadro{
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding-top: 15px;
+        border-radius: 10px;
+        box-shadow: 2px 5px 20px 1px rgba(0, 0, 0, 0.3);
+        padding-bottom: 10px;
+        
+    }
+
+    .titulo {
+       margin-bottom: 20px;
+    }
+    
+    .titulo h1{
+        font-size: 30px;
+    }
+}
