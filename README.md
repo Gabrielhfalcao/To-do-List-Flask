@@ -1,12 +1,12 @@
 #To-do-List-Flask
 
-Projeto CRUD Desenvolvido em Python utilizando o framework Flask.
-Nesse Projeto o usuário poderá criar tarefas/Lembretes, editá-las e excluí-las.
+CRUD project developed in Python using the Flask framework.
+In this Project the user will be able to create tasks/Reminders, edit and delete them.
 
-Faça o teste pelo Link:
+Take the test through the link:
 https://task-list-p5i4.onrender.com/
 
-Tecologias utilizadas: 
+Technologies used:
 - Python(Flask)
 - HTML
 - CSS
