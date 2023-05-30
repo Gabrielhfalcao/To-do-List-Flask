@@ -4,11 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-html{
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-}
 
 body{
     margin: 0px;
@@ -314,6 +309,5 @@ input{
         width: 60px;
         font-size: 10px;
     }
-
 
 }
