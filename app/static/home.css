@@ -136,3 +136,16 @@ a{
 .espaco-button{
   width: fit-content;
 }
+
+@media (max-width: 380px) {
+    body{
+        margin: 0px;
+        background-color: rgb(35, 52, 57);
+        overflow: hidden;
+    }
+
+    .main{
+        position: absolute;
+        top: 50px
+    }  
+}
