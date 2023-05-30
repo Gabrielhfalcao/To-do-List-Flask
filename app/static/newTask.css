@@ -4,6 +4,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+html{
+    overflow: hidden;
+}
+
 body{
     margin: 0px;
     background-color: rgb(35, 52, 57);
